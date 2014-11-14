@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doctor_id: 1
+  hospital_id: 1
+  working_days: 1
+  morning_start_time: 2014-11-10 10:36:57
+  morning_end_time: 2014-11-10 10:36:57
+  morning_appointments: 1
+  afternoon_start_time: 2014-11-10 10:36:57
+  afternoon_end_time: 2014-11-10 10:36:57
+  afternoon_appointments: 1
+  evening_start_time: 2014-11-10 10:36:57
+  evening_end_time: 2014-11-10 10:36:57
+  evening_appointments: 1
+
+two:
+  doctor_id: 1
+  hospital_id: 1
+  working_days: 1
+  morning_start_time: 2014-11-10 10:36:57
+  morning_end_time: 2014-11-10 10:36:57
+  morning_appointments: 1
+  afternoon_start_time: 2014-11-10 10:36:57
+  afternoon_end_time: 2014-11-10 10:36:57
+  afternoon_appointments: 1
+  evening_start_time: 2014-11-10 10:36:57
+  evening_end_time: 2014-11-10 10:36:57
+  evening_appointments: 1
