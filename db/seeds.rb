@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Hospital.create([{name: 'All India Institute of Medical sciences Delhi'},{address1:'Ansari Nagar East, Gautam Nagar, New Delhi'},{city:'New Delhi'},{state:'Delhi'},{multispeciality:true},{branch:'Delhi'}])
