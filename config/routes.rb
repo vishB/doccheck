@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'sites/find_doctors'
+
+  get 'sites/search_doctors'
+
   resources :appointments
 
   resources :specializations
@@ -9,13 +13,18 @@ Rails.application.routes.draw do
 
   resources :hospitals
 
-  resources :sites, :only=>[:index]
+  resources :sites, :only=>[:index] do
+    collection do 
+      get 'search_doctors'
+      get 'find_doctors'
+    end 
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'site#index'
+   root 'sites#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
