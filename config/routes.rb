@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  resources :slots
+
+  resources :specialities
+
   get 'sites/find_doctors'
 
   get 'sites/search_doctors'
 
   resources :appointments
-
-  resources :specializations
 
   resources :patients
 
