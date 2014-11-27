@@ -30,7 +30,7 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "font-awesome-rails"
 
-# Helps in pagination
+# Hepls in pagination
 gem 'will_paginate', '~> 3.0.6'
 
 # Use ActiveModel has_secure_password

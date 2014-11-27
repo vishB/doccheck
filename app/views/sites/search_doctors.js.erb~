@@ -1,0 +1,1 @@
+$("#result_table").append("<%= escape_javascript(render(:partial => 'result')) %>");
