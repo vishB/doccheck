@@ -1,21 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  patient_id: 1
+  patient_name: MyString
   doctor_id: 1
   hospital_id: 1
-  slot: MyString
-  department_id: 1
-  status_id: 1
-  disease_description: MyString
-  date: 2014-11-10
+  disease_description: MyText
 
 two:
-  patient_id: 1
+  patient_name: MyString
   doctor_id: 1
   hospital_id: 1
-  slot: MyString
-  department_id: 1
-  status_id: 1
-  disease_description: MyString
-  date: 2014-11-10
+  disease_description: MyText
