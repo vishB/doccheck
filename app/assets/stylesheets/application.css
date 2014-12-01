@@ -10,7 +10,27 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require font-awesome
  *= require_tree .
  *= require_self
  */
+
+
+.panel-info > .panel-heading {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: #ffffff;
+}
+
+.panel-info {
+    border-color: #3498db;
+}
+
+.panel-warning > .panel-heading {
+    background-color: #f39c12;
+    border-color: #f39c12;
+    color: #ffffff;
+}
+
+.panel-warning {
+	border-color: #f39c12;	
+}

@@ -1,0 +1,37 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">Book Appointment</h3>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm-6">
+			<div class="panel panel-warning ">
+	  		<div class="panel-heading">
+	    		<%= link_to doctor_calendar_path(@doctor,date: @date - 1.month), class: "btn btn-default" do %>
+						<i class="fa fa-angle-left fa-2x"> < </i>
+						<% end %>
+						<%= "#{@date.strftime("%B")} #{@date.year}" %>
+						<%= link_to doctor_calendar_path(@doctor,date: @date + 1.month), class: "btn btn-default" do %>
+							<i class="fa fa-angle-right fa-2x"> > </i>
+					<% end %>
+	  		</div>
+	  		<div class="panel-body">
+	  			<div class="row">
+						<%= calendar @date do |date| %>
+							<%= link_to date.day,new_doctor_appointment_path(@doctor,ap_date: date) %>  
+						<% end %>
+					</div>
+	  		</div>
+			</div>
+			</div>
+			<div class="col-lg-4">
+				<h2><%= @doctor.name%></h2>
+				<h3><%= @doctor.qualification %></h3>
+					<p>A <%= @doctor.speciality.name%> with <strong>15 years</strong> of experience.</p>
+					<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+			</div>
+		</div>	
+	</div>
+</div>
+
+

@@ -1,17 +1,18 @@
 
 
 <div class="container-fluid"> 
-<% @doctors.each do |doctor| %>
-	<div class="row alert alert-info">
-		<div class="col-xs-12 col-md-8">
-			<p><%= doctor.first_name %> <%= doctor.middle_name %> <%= doctor.last_name %> (<%= doctor.qualification %>)</p>
-			<p><%= doctor.speciality.name %></P>
-		  <p><% doctor.rating.times do %><i class="fa fa-star-o fa-2x"></i>
-<%end%>
+	<% @doctors.each do |doctor| %>
+		<div class="row alert alert-info">
+			<div class="col-xs-12 col-md-8">
+				<p><%= doctor.first_name %> <%= doctor.middle_name %> <%= doctor.last_name %> (<%= doctor.qualification %>)</p>
+				<p><%= doctor.speciality.name %></P>
+			  <p>
+			  <% doctor.rating.times do %>
+			  	<i class="fa fa-star-o fa-2x"></i>
+				<%end%>
 			</p>
 		</div>
-		<div class="col-xs-6 col-md-4"><p><%= link_to 'Book an appointment', new_appointment_path, :class => "btn btn-default pull-right", :role => "button"%></p></div>
+		<div class="col-xs-6 col-md-4"><p><%= link_to 'Book an appointment', doctor_calendar_path(doctor), :class => "btn btn-default pull-right", :role => "button"%></p></div>
 	</div>    
 <% end %>
-<div class="container"> 
  

@@ -15,6 +15,8 @@ class SlotsController < ApplicationController
   # GET /slots/new
   def new
     @slot = Slot.new
+    @doctors = Doctor.all
+    @hospitals = Hospital.all
   end
 
   # GET /slots/1/edit

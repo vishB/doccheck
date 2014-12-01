@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
+  
   resources :locations
 
   resources :slots
 
   resources :specialities
 
-  resources :appointments
-
+  resources :doctors do
+    resource :calendar, only: [:show], controller: :calendar,:path => 'book_appointment'
+    resources :appointments
+  end
+  
   resources :patients
-
-  resources :doctors
 
   resources :hospitals
 
