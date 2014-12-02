@@ -21,12 +21,33 @@
     </div>
 
     <div class="control-group">
+      <%= f.label :patient_age, :class => "control-label required", :style=>"text-align:left;" %>
+      <div class="controls">
+        <%= f.select :patient_age, (18..99), :class => "input-xlarge row-fluid" %>
+      </div>       
+    </div>
+
+    <div class="control-group">
+      <%= f.label :patient_email, :class => "control-label required", :style=>"text-align:left;" %>
+      <div class="controls">
+        <%= f.email_field :patient_email, :class => "input-xlarge row-fluid" %> 
+      </div>       
+    </div>
+
+    <div class="control-group">
       <%= f.label :disease_description, :class => "control-label required", :style=>"text-align:left;" %>
       <div class="controls">
         <%= f.text_area :disease_description, :class => "input-xlarge row-fluid" %> 
       </div>       
     </div>
 
+    <div class="control-group">
+      <%= f.label :appointment_date, :class => "control-label required", :style=>"text-align:left;" %>
+      <div class="controls">
+        <p><%= @appointment_date %> </p>
+      </div>       
+    </div>
+    <%= f.hidden_field :app_date, :value => @appointment_date %>
     <div class="actions">
       <%= f.submit %>
     </div>

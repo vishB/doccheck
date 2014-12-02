@@ -16,6 +16,7 @@ class AppointmentsController < ApplicationController
   def new
     @appointment = Appointment.new
     @doctor = params[:doctor_id]
+    @appointment_date = params[:ap_date]
   end
 
   # GET /appointments/1/edit
@@ -71,6 +72,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def appointment_params
-      params.require(:appointment).permit(:patient_name, :patient_id, :doctor_id, :hospital_id, :slot, :disease_description)
+      params.require(:appointment).permit(:patient_name, :patient_age, :patient_phone, :patient_email,:doctor_id, :hospital_id, :slot, :disease_description, :app_date)
     end
 end

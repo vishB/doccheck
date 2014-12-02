@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: 5
   username: root
-  password: 
+  password: admin
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -27,7 +27,7 @@ development:
 test:
   <<: *default
   database: doccheck_test
-  password: 
+  password: admin
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
