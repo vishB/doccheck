@@ -6,7 +6,6 @@ gem 'rails', '4.1.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
-gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -35,6 +34,11 @@ gem "font-awesome-rails"
 
 # Helps in pagination
 gem 'will_paginate', '~> 3.0.6'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end  
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
