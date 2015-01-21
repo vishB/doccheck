@@ -9,6 +9,9 @@
 	
 <body>
 	<div class="container">
+		<%if user_signed_in? %>
+			<p><%= current_user.email%></p>
+		<%end%>
 		<%= yield %>
 	</div>
 </body>

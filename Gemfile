@@ -5,6 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.1'
 # Use mysql as the database for Active Record
 gem 'mysql2'
+# Authentication
+gem 'devise', '~> 3.4.1'
 
 
 # Use SCSS for stylesheets
